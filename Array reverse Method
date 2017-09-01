@@ -1,3 +1,36 @@
+#include<stdio.h>
+#include <stdlib.h> 
+
+void reverse(int arr[],int length)
+{
+  int a=0;
+  int b[length];
+  for(int i=length-1; i>=0; i--)
+  {
+    b[a]=arr[i];
+    a++;
+  }
+  for(int j=0;j<length;j++)
+  {
+    arr[j]=b[j];
+  }
+}
+int main() 
+{ 
+  int N; 
+  scanf("%d",&N);
+  int arr[N];
+  int index;
+  for(index=0; index < N; index++) 
+  { 
+    scanf("%d",&arr[index]); 
+  } 
+  reverse(arr, N);    //Printing the output
+  for(index=0; index < N; index++)
+  { 
+    printf("%d ",arr[index]);
+  }
+}
 
 
 
