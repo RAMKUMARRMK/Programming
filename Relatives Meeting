@@ -1,4 +1,74 @@
+#include<stdio.h>
+#include <stdlib.h>
+/*int reverse(int b[],int n)
+{
+    int x,y,z;
+    for(x=1;x<=2*n;x++)
+    {
+     
+        for(y=1;y<=2*n;y++)
+         {
+         if(b[x]==b[y])
+         {
+             reverse(b[y],n);
+             z++;
+         }
+         }
+     
+    }
+    return z;
+}*/
+int main()
+{
+    int a,c,i,j;
+    scanf("%d",&a);
+    int b[1000][1000];
+    for(i=1;i<=2*a;i++)
+    {
+        scanf("%d",&b[i]);
+    }
+    scanf("%d",&c);
+    int g=2*a;
+    int s=2,e=0;
+    int d=c;
+    while(s>0)
+    {
+        int f=0;
+        for(i=1;i<2*a;i++)
+        {
+            if((b[i]==d)&&(i%2==0))
+            {
+                d=b[i-1];
+                e++;
+            }
+            else if((b[i]==d)&&(i%2!=0))
+            {
+                d=b[i+1];
+                e++;
+            }
+            
+        }
+        f++;
+        if(e==g)
+        {
+            s=-1;
+        }
+    }
+    printf("%d...",e);
+}
+   /* int t=0,d;
+    scanf("%d",&c);
+    for(i=1;i<=2*n;i++)
+    {
+        if(b[i]==c)
+        {
+            d=reverse(b[i],n);
+        }
+    }
+    printf("%d..",d);
 
+
+}*/
 
 
 
