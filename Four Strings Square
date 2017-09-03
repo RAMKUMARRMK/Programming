@@ -1,4 +1,77 @@
+#include <iostream>
+ 
+using namespace std;
 
+int main(int argc, char** argv)
+{
+    string a,b,c,d,r,dw,l;
+    cin>>a>>b>>c>>d;
+    cout<<a<<endl;
+    if(a[a.length()-1]==b[0])
+    {
+        r=b;
+    }
+    else if(a[a.length()-1]==c[0])
+    {
+        r=c;
+    }
+    else
+    {
+        r=d;
+    }
+    if(r[r.length()-1]==b[0])
+    {
+        dw=b;
+    }
+    else if(r[r.length()-1]==c[0])
+    {
+        dw=c;
+    }
+    else
+    {
+        dw=d;
+    }
+    if(dw[d.length()-1]==b[0])
+    {
+        l=b;
+    }
+    else if(dw[dw.length()-1]==c[0])
+    {
+        l=c;
+    }
+    else
+    {
+        l=d;
+    }
+    int i,j,k,m,n;
+    k=l.length()-2;
+    n=1;
+    for(i=1; i<l.length()-1; ++i)
+    {
+        for(j=0; j<a.length(); ++j)
+        {
+            if(j==0)
+            {
+                cout<<l[k]; 
+                --k;
+            }
+            else if(j==a.length()-1)
+            {
+                cout<<r[n];
+                ++n;
+            }
+            else
+            {
+                cout<<"*";
+            }
+        }
+        cout<<endl;
+    }
+    for(i=dw.length()-1; i>=0; --i)
+    {
+        cout<<dw[i];
+    }
+}
 
 
 Question:
