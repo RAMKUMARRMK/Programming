@@ -1,3 +1,21 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a,b,c;
+    scanf("%d%d%d",&a,&b,&c);
+    int d=b*b+c*c;
+    if(a==sqrt(d))
+    {
+        printf("YES");
+    }
+    else
+    {
+        printf("NO");
+    }
+}
+
 
 
 Question:
