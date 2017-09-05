@@ -42,6 +42,38 @@ int main()
     printf("**");
 }
 
+OR
+
+
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int n,i,j;
+int k=1;
+scanf("%d",&n);
+int m[n][n];
+for(i=0;i<n;i++)
+{
+    int er=(i%2==0 ? i/2 : (n - i/2 - 1));
+    for(j=0;j<n;j++)
+    {
+        m[er][j]=k++;
+    }
+    //printf("\n");
+}
+for(i=0;i<n;i++)
+{
+    for(j=0;j<n;j++)
+    {
+        printf("%d ",m[i][j]);
+    }
+    printf("");
+}
+return 0;
+}
+
 
 
 Question:
