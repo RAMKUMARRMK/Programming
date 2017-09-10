@@ -1,0 +1,52 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a,c=0;
+    scanf("%d",&a);
+    int b[a];
+    for(int i=0; i<a; i++)
+    {
+        scanf("%d",&b[i]);
+        if(b[i]>9 && b[i]<100)
+        {
+            c=c+b[i];
+        }
+    }
+    printf("%d..",c);
+}
+
+
+Question:
+
+Accept an array of N values and print the sum S of all the two digit numbers present in the array. If there are no two digit
+numbers, print 0.
+
+Input Format:
+First line contains the size N
+Second line contains N values seperated by a space
+
+Output Format:
+The first line contains S.
+
+Boundary Condition:
+1 < N < 1000
+
+Example Input/Output 1:
+
+Input:
+5
+23 898 6 54 21
+
+Ouput:
+98
+
+Example Input/Output 2:
+
+Input:
+6
+231 898 6 541 2 900
+
+Ouput:
+0
