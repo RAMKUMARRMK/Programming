@@ -1,0 +1,51 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a,j=1;
+    scanf("%d",&a);
+    int b[a];
+    for(int i=0; i<a; i++)
+    {
+        scanf("%d",&b[i]);
+    }
+    int c=b[0];
+    while(j<a)
+    {
+        if(b[j]%c==0)
+        {
+            j++;
+        }
+        else
+        {
+            c=b[j]%c;
+            j++;
+        }
+    }
+    printf("%d..",c);
+}
+
+Question:
+
+
+N integers are passed as input to the program. The program must print the GCD (HCF) of these N integers.
+
+Input Format:
+The first line contains N.
+The second line contains N integers each separated by a space.
+
+Output Format:
+The first line contains the HCF of these N numbers.
+
+Boundary Conditions:
+2 <= N <= 100
+
+Example Input/Output 1:
+
+Input:
+4
+
+15 20 30 50
+Output:
+5
