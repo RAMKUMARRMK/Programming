@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+void printPattern(int N)
+{
+    for(int i=1; i<=N; i++){
+        if(i%2!=0){
+            for(int j=1; j<=N; j++){
+                printf("%d ",i);
+            }
+            printf("%d ",i+1);
+        }
+        else{
+            printf("%d",i+1);
+            for(int j=1; j<=N; j++){
+                printf("%d ",i);
+            }
+        }
+        printf("\n");
+    }
+}
+
+int main() 
+{ 
+    int N; 
+    scanf("%d",&N);
+    printPattern(N); 
+}
+
+
+Question:
+
+
+Given an integer N as the input, print the pattern as given in the Example Input/Output section. 
+
+Input Format:
+The first line contains N.
+
+Output Format:
+N lines containing the desired pattern.
+
+Boundary Conditions:
+2 <= N <= 100
+
+Example Input/Output 1:
+Input:
+3
+
+Output:
+1 1 1 2
+3 2 2 2
+3 3 3 4
