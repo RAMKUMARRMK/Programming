@@ -49,7 +49,8 @@ Boundary Conditions: 1 <= N <= 1000
 Example Input/Output 1: 
 
 Input: 
-5 10 22 33 45 600 
+5 
+10 22 33 45 600 
 
 Output: 
 600 45 33 22 10
