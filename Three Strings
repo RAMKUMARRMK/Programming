@@ -1,0 +1,66 @@
+#include <iostream>
+ 
+using namespace std;
+
+int main(int argc, char** argv)
+{
+  int c;
+  cin>>c;
+  string s[c];
+  for(int i=0;i<c;i++)
+  {
+    cin>>s[i];
+  }
+  string s1,s2,s3;
+  for(int i=0;i<c;i++)
+  {
+    s1+=s[i].substr(0,i+1);
+    int len=s[i].length();
+    s2+=s[i].substr(len-i-1);
+    int a=(len-(i+i+2));
+    s3+=s[i].substr(i+1,a);
+  }
+  cout<<s1<<endl<<s3<<endl<<s2;
+}
+
+
+Question:
+
+Given N string values, the program must print 3 string values as the output as described in the Example Input/Output
+section.
+
+Input format:
+The first line will contain N denoting the number of string values.
+Next N lines will contain the N string values.
+
+Output format:
+Three lines containing string values as described in the Example Input/Output section.
+
+Example Input/Output 1:
+
+Input:
+3
+JOHN
+JOHNY
+JANARDHAN
+
+Output:
+
+JJOJAN
+OHHARD
+NNYHAN
+
+Example Input/Output 2:
+
+Input:
+4
+JOHN
+JOHNY
+JANARDHAN
+MIKESPENCER
+
+Output:
+
+JJOJANMIKE
+OHHARDSPE
+NNYHANNCER
