@@ -1,0 +1,62 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char a;
+    scanf("%c",&a);
+    if(a=='r' || a=='R')
+    {
+        printf("RED");
+    }
+    else if(a=='g' || a=='G')
+    {
+        printf("GREEN");
+    }
+    else if(a=='b' || a=='B')
+    {
+        printf("BLUE");
+    }
+    else
+    {
+        printf("UNDEFINED");
+    }
+}
+
+
+Question:
+
+
+The program must accept a character C and print the output based on the following conditions. 
+- If C is r or R, the output must be RED 
+- If C is g or G, the output must be GREEN 
+- If C is b or B, the output must be BLUE 
+- If C is any other value, the output must be UNDEFINED 
+
+Input Format: 
+The first line denotes the value of C. 
+
+Output Format: 
+The first line contains the value based on the given conditions. (The output is CASE SENSITIVE). 
+
+Boundary Conditions: C will be a single character.
+
+Example Input/Output 1: 
+Input:
+R 
+
+Output: 
+RED 
+Example Input/Output 2:
+Input: 
++ 
+
+Output: 
+UNDEFINED 
+
+Example Input/Output 3: 
+Input:
+Y 
+
+Output: 
+UNDEFINED
