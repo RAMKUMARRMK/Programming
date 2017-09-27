@@ -1,0 +1,57 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char a[200];
+    scanf("%s",&a);
+    int b=strlen(a);
+    for(int i=0; i<b; i++)
+    {
+        int f=0;
+        for(int j=i+1; j<b; j++)
+        {
+            if(a[i]==a[j] && a[i]!=' ')
+            {
+                a[j]=' ';
+                f++;
+            }
+        }
+        if(f>0)
+        {
+            printf("%c",a[f]);
+        }
+    }
+}
+
+
+Question:
+
+
+Given a string S as the input, print the distinct alphabets in S that occur more than once. The alphabets must be printed
+based on the order of their occurrence in S.
+
+Input Format:
+The first line contains S.
+
+Output Format:
+The first line contains the distinct alphabets in S that occur more than once.
+
+Boundary Conditions:
+2 <= LENGTH of S <= 200
+
+Example Input/Output 1:
+
+Input:
+Apple
+
+Output:
+p
+
+Example Input/Output 2:
+
+Input:
+environment
+
+Output:
+en
