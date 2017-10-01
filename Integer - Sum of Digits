@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+int main(int argc,char *argv[])
+{
+    int a=atof(argv[1]);
+    int b[100],c=0,i=0;
+    while(a>0)
+   {
+	b[i]=a%10;
+	a=a/10;
+	c=c+b[i];
+	i++;
+    }
+    printf("%d",c);
+    return 0;
+}
+
+
+Question:
+
+
+The program must accept an integer value N as a command line argument and print the sum of the digits in N.
+Example Input/Output 1:
+Input:
+14
+Output:
+5
+Example Input/Output 2:
+Input:
+1932
+Output:
+15
