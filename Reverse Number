@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+int main(int a, char **b[])
+{
+    int n=atoi(b[1]),s=0;
+    for(;n!=0;n=n/10)
+    {
+        s=s*10+n%10;
+    }
+    printf("%d",s);
+    return 0;
+}
+
+
+
+Question:
+
+
+The program must accept a number N and prints the reverse of the number N.
+
+Example Input/Output 1:
+
+Input:
+12345
+
+Output:
+54321
+
+Example Input/Output 2:
+
+Input:
+10900
+
+Output:
+901
