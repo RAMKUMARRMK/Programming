@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+int main(int argc, char *argv[])
+{
+    int n=argc,a[1000],k=0, max1=-1, max2=-1;
+    for(int i=1; i<n; i++)
+    {
+        a[i]=atoi(argv[i]);
+        if(max1<a[i])
+        {
+            max2=max1;
+            max1=a[i];
+        }
+        else if(max2<a[i] && a[i]!=max1)
+        {
+            max2=a[i];
+        }
+    }
+    printf("%d",max2);
+}
+
+
+Question:
+
+
+The program must accept a set of N integer values as command line arguments and print the second largest value. If there is
+no second largest value, print -1 as the output.
+
+Example Input/Output 1:
+
+Input:
+20 30 30 20 30 15 12 11 10 6
+
+Output:
+20
+
+Example Input/Output 2:
+
+Input:
+19 19 19 19 19 19
+
+Output:
+-1
