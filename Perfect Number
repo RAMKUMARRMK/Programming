@@ -1,0 +1,54 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a,b,c=0;
+    scanf("%d",&a);
+    for(int i=1; i<a-1; i++)
+    {
+        b=a%i;
+        if(b==0)
+        {
+            c=c+i;
+        }
+    }
+    if(c==b)
+    {
+        printf("yes");
+    }
+    else
+    {
+        printf("no");
+    }
+}
+
+
+
+Question:
+
+
+Given a positive integer N as the input, the program must print yes if N is a perfect number. Else no must be printed.
+
+Input Format:
+The first line contains N.
+
+Output Format:
+The first line contains yes or no
+
+Boundary Conditions:
+1 <= N <= 999999
+
+Example Input/Output 1:
+
+Input:
+6
+Output:
+yes
+
+Example Input/Output 2:
+
+Input:
+8
+Output:
+no
