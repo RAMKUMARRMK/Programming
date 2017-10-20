@@ -1,3 +1,5 @@
+c:
+
 #include<stdio.h>
 #include <stdlib.h>
 
@@ -48,6 +50,24 @@ int main()
     }
 }
 
+
+python:
+
+n,a=int(input()),[]
+v=[int(i) for i in input().split()]
+for i in v:
+    c=0
+    for j in range(1,i):
+        if i%j==0:
+            c+=1
+    a.append(c)
+
+c=sorted(list(zip(a,v)))
+for i,j in c:
+
+    print(j,end=' ')
+
+        
 
 Question:
 
