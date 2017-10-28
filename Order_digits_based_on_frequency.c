@@ -3,47 +3,50 @@
 
 int main()
 {
-    long int N,b[50],i=0,z[9]={0};
-    scanf("%ld",&N);
-    while(N>0)
-    {
-        b[i]=N%10;
-        N=N/10; 
-        switch(b[i])
-        {
-            case 1: {z[1]++; break;}
-            case 2: {z[2]++; break;}
-            case 3: {z[3]++; break;}
-            case 4: {z[4]++; break;}
-            case 5: {z[5]++; break;}
-            case 6: {z[6]++; break;}
-            case 7: {z[7]++; break;}
-            case 8: {z[8]++; break;}
-            case 9: {z[9]++; break;}
-        }
-        i++;
-    }
-    for(int j=1; j<=9; j++)
-    {
-        for(int k=j+1; k<=9;k++)
-        {
-            if(z[j]<z[k])
-            {
-                int temp=z[k];
-                z[k]=z[j];
-                z[j]=temp;
-            }
-        }
-        if(z[j]!=0)
-        {
-            for(int l=1; l<=z[j]; l++)
-            {
-                printf("%d",j);
-            }
-        }
-    }
-
-
+   char a[30];
+   scanf("%s",a);
+   int aa[10]={0},b[10]={0},i,j;
+   for(i=0;i<strlen(a);i++)
+   {
+       b[(a[i]-'0')]++;
+       
+   }
+   for(i=0;i<10;i++)
+   {
+       aa[i]=i;
+   }
+   for(i=0;i<10;i++)
+   {
+       for(j=0;j<10;j++)
+       {
+           if(b[i]>b[j])
+           {
+               int t=b[i];
+               b[i]=b[j];
+               b[j]=t;
+               int aaa=aa[i];
+               aa[i]=aa[j];
+               aa[j]=aaa;
+           }
+           else if(b[i]==b[j])
+           {
+               if(aa[i]<aa[j])
+               {
+                   int tt=aa[i];
+                   aa[i]=aa[j];
+                   aa[j]=tt;
+               }
+           }
+       }
+   }
+   for(i=0;i<10;i++)
+   {
+      while(b[i]!=0)
+       {
+           printf("%d",aa[i]);
+           b[i]--;
+       }     
+   }
 }
 
 
